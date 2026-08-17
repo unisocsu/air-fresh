@@ -3,20 +3,44 @@ plugins {
 }
 
 android {
-    namespace 'com.example.airplanerefresh'
-
-    compileSdk 35
+	namespace "com.fileexplorer"
+    compileSdkVersion 34
 
     defaultConfig {
-        applicationId 'com.example.airplanerefresh'
+        applicationId 'com.fileexplorer'
+        minSdkVersion 16
+        //noinspection ExpiringTargetSdkVersion,ExpiredTargetSdkVersion
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
 
-        minSdk 23
-        targetSdk 35
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
 
-        versionCode 2
-        versionName '1.1'
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildFeatures {
+        buildConfig = false
     }
 }
 
 dependencies {
+    // The decompiled code references Kotlin runtime classes (Intrinsics, Function0/1/2,
+    // Unit, Pair, CollectionsKt, StringsKt, RangesKt, Metadata, etc.) even though it's
+    // now plain .java — this dependency provides those classes at compile/runtime.
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.24'
 }
