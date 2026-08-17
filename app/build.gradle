@@ -3,18 +3,18 @@ plugins {
 }
 
 android {
-	namespace "com.fileexplorer"
+    namespace "com.example.airplanerefresh"
     compileSdkVersion 34
 
     defaultConfig {
-        applicationId 'com.fileexplorer'
-        minSdkVersion 16
-        //noinspection ExpiringTargetSdkVersion,ExpiredTargetSdkVersion
+        applicationId "com.example.airplanerefresh"
+        minSdkVersion 19
         targetSdkVersion 34
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -39,8 +39,5 @@ android {
 }
 
 dependencies {
-    // The decompiled code references Kotlin runtime classes (Intrinsics, Function0/1/2,
-    // Unit, Pair, CollectionsKt, StringsKt, RangesKt, Metadata, etc.) even though it's
-    // now plain .java — this dependency provides those classes at compile/runtime.
     implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.24'
 }

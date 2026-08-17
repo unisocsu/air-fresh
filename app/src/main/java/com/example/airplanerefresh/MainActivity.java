@@ -3,7 +3,7 @@ package com.example.airplanerefresh;
 import android.app.Activity;
 import android.content.Context;
 import android.net.ConnectivityManager;
-import android.net.Network;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -130,8 +130,8 @@ public class MainActivity extends Activity {
             return false;
         }
 
-        Network network = manager.getActiveNetwork();
-        return network != null;
+        NetworkInfo activeNetworkInfo = manager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
     @Override
