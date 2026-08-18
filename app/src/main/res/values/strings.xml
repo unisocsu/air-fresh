@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">רענון רשת</string>
+
+    <string name="root_note">
+        האפליקציה דורשת הרשאת Root כדי לבצע רענון רשת.
+    </string>
+
+    <string name="check_phone_network">
+        בדיקה אוטומטית של רשת טלפונית
+    </string>
+
+    <string name="check_phone_network_description">
+        כאשר אפשרות זו פעילה, האפליקציה לא תבצע רענון אם קיימת רשת סלולרית או שיחה פעילה.
+    </string>
+
+    <string name="check_internet">
+        בדיקה אוטומטית של רשת Internet
+    </string>
+
+    <string name="check_internet_description">
+        כאשר אפשרות זו פעילה, האפליקציה לא תבצע רענון אם קיימת רשת Internet פעילה.
+    </string>
+
+    <string name="refresh">
+        רענן רשת עכשיו
+    </string>
+
+    <string name="status_ready">
+        מוכן
+    </string>
+
+</resources>
